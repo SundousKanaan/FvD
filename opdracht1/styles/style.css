@@ -4,12 +4,10 @@
 /* FONTS */
 /*********/
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
+	font-family: 'oreos';
+	src: url('../fonts/eenfont.woff') format('woff');
+	/* font-weight: bold; */
+	/* font-style: normal; */
 }
 
 
@@ -36,8 +34,10 @@ button, summary {
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text:#eee;
+	--color-background:#1e469b;
+	--color-first-border:#1e469b;
+	--color-second-border:#94d7f2;
 }
 
 
@@ -51,7 +51,294 @@ body {
   font-family:eenfont, sans-serif;
   color:var(--color-text);
   background-color:var(--color-background);
+  margin: 0;
 }
 
 /* jouw code */
+h1,span{
+	margin: 0;
+	padding: 0;
+	width: fit-content;
+	height: fit-content;
+}
 
+h1{
+	margin: auto ;
+	position: relative;
+	top: 5em;
+
+	transform: scaleX(1.5);
+	transform: scaleY(.8);
+
+	display: flex;
+}
+
+h1 span{
+	font-size: 4em;
+}
+
+
+
+
+
+
+
+
+
+h1 span:first-of-type::before{
+	content: "";
+	width: 1em;
+	height: 1em;
+	background: url("../images/oreo-cookie-choco.png") no-repeat;
+	background-size: 1em;
+	position: absolute;
+	top: .1em; 
+	left: -.2em;
+	z-index: 2;
+
+
+	animation-name: rollend, omgekeerde-rol, vallen;
+	animation-duration: 3s,2s,2s;
+	animation-delay: 0s, 3s, 5s;
+	animation-iteration-count:1;
+	animation-timing-function:ease-in, ease-in-out, ease-out;
+	animation-fill-mode: none,none,forwards;
+}
+
+@keyframes rollend {
+	0%{
+		left: -250%;
+		transform: rotate(-360deg);
+	}
+	100%{
+		left: .95em;
+	}
+}
+
+@keyframes omgekeerde-rol {
+	0%{
+		left: .95em;
+		
+	}
+	50%{
+		left: .95em;
+		transform: rotate(360deg);
+	}
+	100%{
+		left: -.2em;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes vallen{
+	0%{
+		top: .1em;
+		left: -.2em;
+	}
+	50%{
+		top: 2em;
+		left: .95em;
+	}
+	100%{
+		top: 6em;
+		left: .95em;
+	}
+}
+
+
+
+
+
+
+
+h1 span:last-of-type::after{
+	content: "";
+	width: 1em;
+	height: 1em;
+	background: url("../images/oreo-cookie-choco2.png") no-repeat;
+	background-size: 1em;
+	position: absolute;
+	top: .1em;
+	right: -.2em;
+	z-index: 1;
+
+	animation-name: rollend2, omgekeerde-rol2, vallen2;
+	animation-duration: 3s, 2s, 2s;
+	animation-delay: 0s, 3s, 5s;
+	animation-iteration-count:1;
+	animation-timing-function:ease-in, ease-in-out, ease-out;
+	animation-fill-mode: none,none,forwards;
+}
+
+@keyframes rollend2 {
+	0%{
+		right: 316%;
+		transform: rotate(360deg);
+	}
+	100%{
+		right: 1em;
+	}
+}
+
+@keyframes omgekeerde-rol2 {
+	0%{
+		right: 1em;
+	}
+	50%{
+		right: 1em;
+		transform: rotate(-360deg);
+	}
+	100%{
+		right: -.2em;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes vallen2{
+	0%{
+		top: .1em;
+		right: -.2em;
+	}
+	50%{
+		top: 2em;
+		right: 1em;
+	}
+	100%{
+		top: 6em;
+		right: 1em;
+	}
+}
+
+
+
+
+
+
+
+
+h1 span:first-of-type, h1 span:last-of-type{
+	animation-name: verschijnen;
+	animation-duration: 1s;
+	animation-delay: 5s;
+	animation-iteration-count:1;
+	animation-fill-mode: both;
+}
+
+@keyframes verschijnen{
+	0%{
+		color: transparent;
+	}
+	100%{
+		color: var(--color-text);
+	}
+}
+
+
+
+
+
+
+h1 span:nth-of-type(2){
+	transform-origin: right;
+	
+	animation-name: R-rekken;
+	animation-duration: .6s;
+	animation-delay: 4.2s;
+	animation-iteration-count:1;
+	animation-timing-function:ease-in;
+	animation-fill-mode: both;
+}
+
+@keyframes R-rekken {
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+}
+
+h1 span:nth-of-type(3){
+	transform-origin: left;
+
+	animation-name: E-rekken;
+	animation-duration: .6s;
+	animation-delay: 4.2s;
+	animation-iteration-count:1;
+	animation-timing-function:ease-in;
+	animation-fill-mode: both;
+}
+
+@keyframes E-rekken {
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+}
+
+h1{
+	transform-origin: center;
+	animation-name: draaien;
+	animation-duration: .6s;
+	animation-delay: 6s;
+	animation-iteration-count:1;
+	animation-timing-function:ease-in;
+	animation-fill-mode: both;
+}
+
+@keyframes draaien {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(-20deg);
+		text-shadow: -.1em .1em var(--color-first-border), -.2em .2em var(--color-second-border) ;
+	}
+}
+
+body{
+	overflow: hidden;
+}
+
+body::after{
+	content:"";
+	display: block;
+	width: 110%;
+	height: 20%;
+	background-color: var(--color-text);
+	position: absolute;
+	bottom: 0;
+	left: -1.5em;
+
+	animation-name: melk-golf;
+	animation-duration: 3s;
+	animation-delay: -1s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+	animation-timing-function: linear;
+}
+
+@keyframes melk-golf{
+	0%{
+		/* left */
+		border-radius: 10% 90% 0% 10% / 52% 74% 0% 0% ; 
+	}
+	25%{
+		/* center */
+		border-radius: 49% 51% 0% 10% / 52% 74% 0% 0% ;
+	}
+	50%{
+		/* right */
+		border-radius: 83% 17% 0% 10% / 52% 74% 0% 0% ;
+	}
+	75%{
+		/* center */
+		border-radius: 49% 51% 0% 10% / 52% 74% 0% 0% ;
+	}
+	100%{
+		/* left */
+		border-radius: 10% 90% 0% 10% / 52% 74% 0% 0% ;
+	}
+}
