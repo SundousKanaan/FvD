@@ -16,7 +16,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Bronnenlijst
   1. Oreo cookie image van (https://nl.m.wikipedia.org/wiki/Bestand:Vector_Oreo.svg) dan heb ik het verandert met photoshop
   2. Oreos font van (https://fontmeme.com/fonts/oreos-font/)
-  3. -...-
 
 
 
