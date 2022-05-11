@@ -93,7 +93,8 @@ h1 span:first-of-type::before{
 	background-size: 1em;
 	position: absolute;
 	top: .1em; 
-	left: -.2em;
+	/* left: -.2em; */
+	
 	z-index: 2;
 
 
@@ -107,7 +108,7 @@ h1 span:first-of-type::before{
 
 @keyframes rollend {
 	0%{
-		left: -250%;
+		left: -750%;
 		transform: rotate(-360deg);
 	}
 	100%{
@@ -159,7 +160,7 @@ h1 span:last-of-type::after{
 	background-size: 1em;
 	position: absolute;
 	top: .1em;
-	right: -.2em;
+	/* right: -.2em; */
 	z-index: 1;
 
 	animation-name: rollend2, omgekeerde-rol2, vallen2;
@@ -172,7 +173,7 @@ h1 span:last-of-type::after{
 
 @keyframes rollend2 {
 	0%{
-		right: 316%;
+		right: 995%;
 		transform: rotate(360deg);
 	}
 	100%{
@@ -216,37 +217,15 @@ h1 span:last-of-type::after{
 
 
 
-h1 span:first-of-type, h1 span:last-of-type{
-	animation-name: verschijnen;
-	animation-duration: 1s;
-	animation-delay: 5s;
-	animation-iteration-count:1;
-	animation-fill-mode: both;
-}
-
-@keyframes verschijnen{
-	0%{
-		color: transparent;
-	}
-	100%{
-		color: var(--color-text);
-	}
-}
-
-
-
-
-
-
 h1 span:nth-of-type(2){
 	transform-origin: right;
 	
-	animation-name: R-rekken;
-	animation-duration: .6s;
-	animation-delay: 4.2s;
+	animation-name: R-rekken, movetop;
+	animation-duration: .6s, 1s;
+	animation-delay: 4.2s, .6s;
 	animation-iteration-count:1;
-	animation-timing-function:ease-in;
-	animation-fill-mode: both;
+	animation-timing-function:ease-in, ease-in-out;
+	animation-fill-mode: both, both;
 }
 
 @keyframes R-rekken {
@@ -258,25 +237,8 @@ h1 span:nth-of-type(2){
 	}
 }
 
-h1 span:nth-of-type(3){
-	transform-origin: left;
 
-	animation-name: E-rekken;
-	animation-duration: .6s;
-	animation-delay: 4.2s;
-	animation-iteration-count:1;
-	animation-timing-function:ease-in;
-	animation-fill-mode: both;
-}
 
-@keyframes E-rekken {
-	0%{
-		transform: scaleX(0);
-	}
-	100%{
-		transform: scaleX(1);
-	}
-}
 
 h1{
 	transform-origin: center;
@@ -297,6 +259,69 @@ h1{
 		text-shadow: -.1em .1em var(--color-first-border), -.2em .2em var(--color-second-border) ;
 	}
 }
+
+h1 span:first-of-type{
+	position: relative;
+
+	animation-name: verschijnen;
+	animation-duration: 1s;
+	animation-delay: 5s;
+	animation-iteration-count:1;
+	animation-fill-mode: both;
+}
+
+h1 span:last-of-type{
+	position: relative;
+
+	animation-name: verschijnen, movebottom;
+	animation-duration: 1s, 1s;
+	animation-delay: 5s, 6s;
+	animation-iteration-count:1;
+	animation-fill-mode: both, both;
+}
+
+h1 span:nth-of-type(3){
+	position: relative;
+
+	animation-name: E-rekken, movebottom;
+	animation-duration:.6s, 1s;
+	animation-delay: 4.25s, 6s;
+	animation-iteration-count:1;
+	animation-fill-mode: both,both;
+}
+
+
+@keyframes E-rekken {
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+}
+
+@keyframes movebottom{
+	0%{
+		bottom: 0em;
+	}
+	100%{
+		bottom: -.1em;
+	}
+}
+
+@keyframes verschijnen{
+	0%{
+		color: transparent;
+	}
+	100%{
+		color: var(--color-text);
+	}
+}
+
+
+
+
+
 
 body{
 	overflow: hidden;
