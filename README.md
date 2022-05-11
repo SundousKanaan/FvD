@@ -16,7 +16,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Bronnenlijst
   1. Oreo cookie image van (https://nl.m.wikipedia.org/wiki/Bestand:Vector_Oreo.svg) dan heb ik het verandert met photoshop
   2. Oreos font van (https://fontmeme.com/fonts/oreos-font/)
-  3. -...-
 
 
 
@@ -27,15 +26,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+  <img src="readme-images/storyboard.jpg" width="375px" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - golf animatie
+  - border voor de hele woord
  
 </details>
 
