@@ -31,8 +31,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - golf animatie
-  - border voor de hele woord
+  - Maak een ingewikkeld animatie
+  - Golf animatie
+  - Border voor de hele woord
  
 </details>
 
@@ -40,7 +41,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Opdracht 1 reflectie
 
-<details>
+<details open>
   <summary>uitwerken bij afronden opdracht (voor week 4)</summary>
 
 
