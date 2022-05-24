@@ -59,9 +59,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Mijn merk font is oreos font en het gratis versie is lelijk met dikke border en transparant letters. Na verschillende experimenten, zoals het invullen van letters, het toevoegen van een tweede border, besloot ik een ander lettertype te kiezen dat zoveel mogelijk geschikt zou zijn voor het merk.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  <img src="readme-images/opdraacht1-lastig-1.png" width="375px" alt="bummer">
 </details>
 
 
