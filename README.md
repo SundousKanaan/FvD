@@ -51,17 +51,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit ging goed/Heb ik geleerd: 
   Ik heb geleerd, hoe ik ingewikkelde animaties in verschillende tijden kan aanpassen om mijn idee te maken.
 
-  <img src="readme-images/opdraacht1-goed-1.png" width="375px" alt="top">
+  <img src="readme-images/opdracht1-goed-1.png" width="375px" alt="top">
 
   Ik heb ook geleerd hoe kan ik twee borders kan maken voor mijn tekst
-  <img src="readme-images/opdraacht1-goed-2.png" width="375px" alt="top">
+  <img src="readme-images/opdracht1-goed-2.png" width="375px" alt="top">
 
+  Ik heb ook geleerd hoe kan ik iets zoals een golf kan maken via ::after met animatie. Het eindresultaat was geen professionele golf, maar het diende zijn doel en ik zie het als melk in een kopjeز
+  <img src="readme-images/opdracht1-goed-3.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Mijn merk font is oreos font en het gratis versie is lelijk met dikke border en transparant letters. Na verschillende experimenten, zoals het invullen van letters, het toevoegen van een tweede border, besloot ik een ander lettertype te kiezen dat zoveel mogelijk geschikt zou zijn voor het merk.
 
-  <img src="readme-images/opdraacht1-lastig-1.png" width="375px" alt="bummer">
+  <img src="readme-images/opdracht1-lastig-1.png" width="375px" alt="bummer">
 </details>
 
 
