@@ -87,6 +87,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Interactieve site maken
   - Mooie animaties en interacties maken.
   - Audiospeler customizen volgens mijn design
+  
+  ### Gebruikte API:
+  Anime themes API: https://github.com/LetrixZ/animethemes-api
+  - Deze API inkludt:
+    - Artist name
+    - Artist foto
+    - Anime name
+    - Anime foto
+    - Anime jaar
+    - Anime sezoen
+    - Theme name
+    - Theme type (OP / ED)
+    - Theme quality
+    - Theme video URL
+    - Theme audio URL
+  
+  
 </details>
 
 
