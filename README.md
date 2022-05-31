@@ -96,7 +96,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
     - Anime name
     - Anime foto
     - Anime jaar
-    - Anime sezoen
+    - Anime seizoen
     - Theme name
     - Theme type (OP / ED)
     - Theme quality
