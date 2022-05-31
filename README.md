@@ -76,8 +76,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
+
   <img src=mobiel.jpg width="375px" alt="ontwerp opdracht 2 mobiel flow">
   <img src="/readme-images/Desktop.png" width="375px" alt="ontwerp opdracht 2 desktop versie">
+
 
 
   ### Je ambitie: 
