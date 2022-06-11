@@ -245,7 +245,6 @@ playlistknop.addEventListener('click', playlistOpen);
 
 var lastplayedKnop= document.querySelector('#home-page section:first-of-type button')
 var playerbackKnop= document.querySelector('#player-page button[data-vorm="back"]');
-var playerPage = document.querySelector('#player-page');
 
 
 
@@ -253,7 +252,7 @@ var playerPage = document.querySelector('#player-page');
 
 
 
-var startSong = document.querySelector('#home-page section:first-of-type button a img');
+var startSong = document.querySelector('#home-page section:first-of-type button');
 var playerSection = document.querySelector('#player-page');
 
 
@@ -272,3 +271,11 @@ function playerPage(){
 }
 
 startSong.addEventListener('click', playerPage);
+
+
+
+
+// API code
+
+const URLop = "https://animethemes-api.herokuapp.com/api/v1/search/OP";
+const URLall = "https://animethemes-api.herokuapp.com/api/v1/search/anime";
