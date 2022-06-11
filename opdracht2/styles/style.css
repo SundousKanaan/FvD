@@ -575,7 +575,8 @@ header>ul li[data-info="Onepiece-theme"].notworkTheme{
 }
 
 #home-page section:first-of-type button,
-#home-page section:first-of-type button img,
+#home-page section:first-of-type button a,
+#home-page section:first-of-type button a img,
 #home-page section:first-of-type h2,
 #home-page section:first-of-type p {
 	position: relative;
@@ -599,10 +600,19 @@ header>ul li[data-info="Onepiece-theme"].notworkTheme{
 	justify-self: end;
 }
 
-#home-page section:first-of-type button img {
+#home-page section:first-of-type button a img {
 	width: var(--play-knop-size);
 	filter: none;
 	background-color: rgba(255, 255, 255, 0);
+	transition: .5s;
+}
+
+#home-page section:first-of-type button img:hover{
+transform: scale(1.2);
+}
+
+#home-page section:first-of-type button img:active{
+	transform: scale(.9);
 }
 
 #home-page section:first-of-type h2,
