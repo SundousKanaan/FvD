@@ -54,32 +54,29 @@ html {
 }
 
 body.BleachTheme{
-	--color-theme: rgb(255, 123, 0);
+	--color-theme: #357E9D ;
 	--color-secondery: black;
-	--color-third: white;
-	--color-opacity-white: rgba(225, 225, 225, .5);
+
 	--background: url(../images/naruto-background.svg);
-	--theme-symbol: url(../images/Uzumaki_Symbol.png);
+	--theme-symbol: url(../images/bleach-symbol.svg);
 	--play-knop: url(../images/start-button.svg);
 }
 
 body.HxHTheme{
-	--color-theme: rgb(255, 123, 0);
-	--color-secondery: black;
-	--color-third: white;
-	--color-opacity-white: rgba(225, 225, 225, .5);
+	--color-theme: #f73030 ;
+	--color-secondery: #095b03;
+
 	--background: url(../images/naruto-background.svg);
-	--theme-symbol: url(../images/Uzumaki_Symbol.png);
+	--theme-symbol: url(../images/HxH-symbol.svg);
 	--play-knop: url(../images/start-button.svg);
 }
 
 body.OnepieceTheme{
-	--color-theme: rgb(255, 123, 0);
-	--color-secondery: black;
-	--color-third: white;
-	--color-opacity-white: rgba(225, 225, 225, .5);
+	--color-theme: #FFC900;
+	--color-secondery: #0094FF;
+
 	--background: url(../images/naruto-background.svg);
-	--theme-symbol: url(../images/Uzumaki_Symbol.png);
+	--theme-symbol: url(../images/onepiece-symbol.svg);
 	--play-knop: url(../images/start-button.svg);
 }
 
@@ -120,7 +117,7 @@ body {
 
 header {
 	display: grid;
-	grid-template-columns: 2em 1fr 2em;
+	grid-template-columns: 3em 1fr 3em;
 	column-gap: .5em;
 	align-items: center;
 	position: relative;
@@ -150,6 +147,12 @@ header > button:first-of-type {
 	grid-row-start: 1;
 	background: none;
 	border: none;
+
+	transition: .3s;
+}
+
+header > button:first-of-type:hover{
+	transform: scale(1.2);
 }
 
 header > button:first-of-type img {
@@ -168,16 +171,24 @@ header > button:last-of-type {
 	background: none;
 	border: none;
 	padding: 0;
+	width: 3em;
+	height: 3em;
+
+	transition: .3s;
+
+	background-image: var(--theme-symbol);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-header > button:last-of-type img {
-	width: 2.5em;
-
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+header > button:last-of-type:hover{
+	transform: scale(1.2);
 }
 
+header > button:last-of-type:active{
+	transform: scale(.8);
+}
 
 
 
@@ -203,9 +214,10 @@ header nav {
 	background-repeat: no-repeat;
 	background-color: var(--color-theme);
 	background-position: right bottom;
+	background-size: 20em;
 
 	transform: translateX(-100%);
-	transition: 0.5s;
+	transition: .5s;
 }
 
 header nav.openNav{
@@ -220,6 +232,15 @@ header nav button{
 	top: 1em;
 }
 
+header nav button:focus,
+header nav button:hover{
+	transform: scale(1.2);
+}
+
+header nav button:active{
+	transform: scale(.8);
+}
+
 header nav ul {
 	margin: 0;
 	margin-top: 4em;
@@ -231,6 +252,8 @@ header nav ul li {
 	margin-bottom: 1.5em;
 	position: relative;
 	padding-left: 1em;
+	
+	height: 2em;
 }
 
 header nav ul li a{
@@ -245,15 +268,29 @@ header nav ul li a{
 }
 
 header nav ul li a::before{
-	content: "R";
-	/* var(--theme-symbol) */
-	display: inline-block;
-	width: 1em;
-	height: auto;
+	content: "";
+	background-image: var(--theme-symbol) ;
+	background-size: 1.5em;
+	background-repeat: no-repeat;
+	display: block;
+	width: 2em;
+	height: 2em;
 	position: absolute;
 	left: 0;
+	transition: .3s;
 }
 
+header nav ul li a:hover{
+	color: var(--color-third);
+}
+
+header nav ul li a:hover::before{
+	transform: scale(1.5);
+}
+
+header nav ul li a:active::before{
+	transform: scale(.9);
+}
 
 
 
@@ -272,21 +309,21 @@ header nav ul li a::before{
 header>ul {
 	margin: 0;
 	padding: 0;
-	padding-top: 2.5em;
+	/* padding-top: 2.5em; */
 	list-style: none;
 
 	background-color: var(--color-secondery);
+
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-
 	z-index: 100;
 
 	display: grid;
 	grid-template-columns: 1em 1fr 1em;
-	grid-template-rows: 3em auto;
+	grid-template-rows: 2.5em 3em auto;
 	row-gap: .5em;
 
 	transform: translateX(100%);
@@ -303,9 +340,10 @@ header>ul h2 {
 	padding: 0;
 	padding-right: 1em;
 	color: var(--color-theme);
+
 	grid-column-start: 2;
 	grid-column-end: -1;
-	grid-row-start: 1;
+	grid-row-start: 2;
 	justify-self: center;
 }
 
@@ -317,7 +355,18 @@ header>ul button{
 	grid-row-start: 1;
 	justify-self: start;
 	position: absolute;
-	top: -1em;
+	top: 1em;
+	left: 1em;
+}
+
+
+header>ul> button:focus,
+header>ul> button:hover{
+	transform: scale(1.2);
+}
+
+header>ul button:active{
+	transform: scale(.8);
 }
 
 header>ul li {
@@ -345,6 +394,10 @@ header>ul li button{
 	column-gap: .5em;
 }
 
+header>ul li:hover{
+	box-shadow: 0 0 .5em .2em var(--color-theme);
+}
+
 header>ul li button img {
 	height: 100%;
 	grid-column-start: 2;
@@ -368,7 +421,7 @@ header>ul li button div {
 	width: 100%;
 	height: 50%;
 	border-radius: 20%;
-	border: solid rgba(225, 225, 225, 1) .1em;
+	border: solid rgb(0, 0, 0) .15em;
 }
 
 header>ul li button div:nth-last-of-type(1) {
@@ -392,7 +445,7 @@ header>ul li button div:nth-last-of-type(3) {
 
 header>ul li[data-info="Naruto-theme"] {
 	background-color: rgb(255, 123, 0);
-	grid-row-start: 2;
+	grid-row-start: 3;
 }
 
 header>ul li[data-info="Naruto-theme"] button div:nth-last-of-type(1) {
@@ -408,8 +461,10 @@ header>ul li[data-info="Naruto-theme"] button div:nth-last-of-type(3) {
 }
 
 
+
+
 header>ul li[data-info="Bleach-theme"] {
-	grid-row-start: 3;
+	grid-row-start: 4;
 }
 
 header>ul li[data-info="Bleach-theme"] button div:nth-last-of-type(1) {
@@ -425,8 +480,10 @@ header>ul li[data-info="Bleach-theme"] button div:nth-last-of-type(3) {
 }
 
 
+
+
 header>ul li[data-info="HxH-theme"] {
-	grid-row-start: 4;
+	grid-row-start: 5;
 }
 
 header>ul li[data-info="HxH-theme"] button div:nth-last-of-type(1) {
@@ -441,16 +498,19 @@ header>ul li[data-info="HxH-theme"] button div:nth-last-of-type(3) {
 	background-color: white;
 }
 
+
+
+
 header>ul li[data-info="Onepiece-theme"] {
-	grid-row-start: 5;
+	grid-row-start: 6;
 }
 
 header>ul li[data-info="Onepiece-theme"] button div:nth-last-of-type(1) {
-	background-color: #0094FF ;
+	background-color: #FFC900  ;
 }
 
 header>ul li[data-info="Onepiece-theme"] button div:nth-last-of-type(2) {
-	background-color: #FFC900;
+	background-color: #0094FF ;
 }
 
 header>ul li[data-info="Onepiece-theme"] button div:nth-last-of-type(3) {

@@ -3,7 +3,7 @@
 // theme list
 // **************
 var themeList = document.querySelector('header>ul');
-var themeknop = document.querySelector('header button:last-of-type img');
+var themeknop = document.querySelector('header button:last-of-type');
 var closethemeknop = document.querySelector('header>ul button');
 
 var navList = document.querySelector('header nav');
@@ -52,6 +52,8 @@ var BleachThemeKnop = document.querySelector('header>ul li[data-info="Bleach-the
 var HxHThemeKnop = document.querySelector('header>ul li[data-info="HxH-theme"] button');
 var OnepieceThemeKnop = document.querySelector('header>ul li[data-info="Onepiece-theme"] button');
 
+var bady = document.querySelector('body');
+
 function NarutoOn(){
     NarutoTheme.classList.add('workTheme');
     BleachTheme.classList.remove('workTheme');
@@ -62,6 +64,10 @@ function NarutoOn(){
     BleachTheme.classList.add('notworkTheme');
     HxHTheme.classList.add('notworkTheme');
     OnepieceTheme.classList.add('notworkTheme');
+
+    bady.classList.remove('BleachTheme');
+    bady.classList.remove('HxHTheme');
+    bady.classList.remove('OnepieceTheme');
 }
 
 function BleachOn(){
@@ -74,6 +80,10 @@ function BleachOn(){
     BleachTheme.classList.remove('notworkTheme');
     HxHTheme.classList.add('notworkTheme');
     OnepieceTheme.classList.add('notworkTheme');
+
+    bady.classList.add('BleachTheme');
+    bady.classList.remove('HxHTheme');
+    bady.classList.remove('OnepieceTheme');
 }
 
 function HxHOn(){
@@ -86,6 +96,10 @@ function HxHOn(){
     BleachTheme.classList.add('notworkTheme');
     HxHTheme.classList.remove('notworkTheme');
     OnepieceTheme.classList.add('notworkTheme');
+
+    bady.classList.remove('BleachTheme');
+    bady.classList.add('HxHTheme');
+    bady.classList.remove('OnepieceTheme');
 }
 
 function onepieceOn(){
@@ -98,6 +112,10 @@ function onepieceOn(){
     BleachTheme.classList.add('notworkTheme');
     HxHTheme.classList.add('notworkTheme');
     OnepieceTheme.classList.remove('notworkTheme');
+
+    bady.classList.remove('BleachTheme');
+    bady.classList.remove('HxHTheme');
+    bady.classList.add('OnepieceTheme');
 }
 
 
@@ -277,5 +295,27 @@ startSong.addEventListener('click', playerPage);
 
 // API code
 
-const URLop = "https://animethemes-api.herokuapp.com/api/v1/search/OP";
-const URLall = "https://animethemes-api.herokuapp.com/api/v1/search/anime";
+// const URLop = "https://animethemes-api.herokuapp.com/api/v1/search/OP";
+const URL = "https://animethemes-api.herokuapp.com/api/v1/search/theme";
+
+var allsongsList = document.querySelector('#list-page ul');
+
+// AllsongsKnop
+
+function getsongs(){
+    getData(URL).then((data) =>{
+        var Allsongs = data.themes;
+       
+        Allsongs.forEach((song) => {
+            console.log(song);
+        });
+    });
+}
+
+async function getData(URL) {
+	return fetch(URL)
+		.then((response) => response.json())
+		.then((jsonData) => jsonData);
+}
+
+getsongs();
