@@ -87,6 +87,7 @@ body.OnepieceTheme{
 
 
 
+
 /****************/
 /* body STYLING */
 /****************/
@@ -549,6 +550,7 @@ main section:last-of-type {
 	background-color: rgba(255, 255, 255, 0.4);
 
 	width: 100%;
+	height: 100% ;
 	object-fit: cover;
 	justify-self: center;
 
@@ -663,6 +665,7 @@ main section:last-of-type {
 	background-color: rgba(255, 255, 255, 0.4);
 
 	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	justify-self: center;
 
@@ -826,7 +829,7 @@ main section:last-of-type {
 
 /* All songs section */
 #home-page section:nth-of-type(5) {
-	height: 9.7em;
+	height: 10em;
 
 	grid-column-start: 1;
 	grid-column-end: -1;
@@ -876,6 +879,7 @@ main section:last-of-type {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	height: 7.7em;
 
 	grid-column-start: 2;
 	grid-column-end: -2;
@@ -889,15 +893,26 @@ main section:last-of-type {
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	overscroll-behavior: none;
-
-
-	-ms-overflow-style: none;
-	scrollbar-width: none;
 }
+
+#home-page section:nth-of-type(5) ul::-webkit-scrollbar{
+	background: transparent;
+	height: .6em;
+	border-radius: 1em;
+}
+
+#home-page section:nth-of-type(5) ul::-webkit-scrollbar-thumb{
+	background: transparent;
+	border-radius: 1em;
+}
+
+#home-page section:nth-of-type(5) ul:hover::-webkit-scrollbar-thumb{
+	background: var(--color-theme);
+}
+
 
 #home-page section:nth-of-type(5) ul li {
 	display: grid;
-	
 	grid-template-rows: 60% 30%;
 	width: 4.2em;
 	height: 100%;
@@ -913,11 +928,7 @@ main section:last-of-type {
 	height: 4.2em;
 
 	overflow: hidden;
-
 	border: none;
-	background-image:
-		radial-gradient(transparent 20%,
-			blue 20% 100%);
 	border-radius: 50%;
 
 	margin-bottom: .7em;
@@ -926,8 +937,10 @@ main section:last-of-type {
 #home-page section:nth-of-type(5) ul li button img {
 	display: block;
 	width: 4.2em;
-	display: cover;
-	height: 100%;
+	height: auto;
+
+	aspect-ratio: 1;
+	-webkit-mask: radial-gradient(transparent .6em, #ff000088 .6em .8em, red .8em);
 }
 
 #home-page section:nth-of-type(5) ul li p {
@@ -938,9 +951,9 @@ main section:last-of-type {
 	word-wrap: break-word;
 }
 
-#home-page{
+/* #home-page{
 	display: none;
-}
+} */
 
 
 
@@ -1242,7 +1255,8 @@ main section:last-of-type {
 
 	display: grid;
 	grid-template-columns:.5em 1fr .5em;
-	grid-template-rows: auto;
+	/* grid-template-rows: auto; */
+	grid-auto-rows: 4em;
 	column-gap: 1em;
 	row-gap: 2em;
 	grid-auto-flow: column;
@@ -1402,7 +1416,8 @@ main section:last-of-type {
 
 	display: grid;
 	grid-template-columns:.5em 1fr .5em;
-	grid-template-rows: auto;
+	/* grid-template-rows: auto; */
+	grid-auto-rows: 4em;
 	column-gap: 1em;
 	row-gap: 2em;
 	grid-auto-flow: column;
@@ -1516,7 +1531,9 @@ main section:last-of-type {
 
 
 
-
+/*******************************/
+/* favorite page section STYLING */
+/*******************************/
 #favorite-page{
 	margin: 0;
 	padding: 0;
@@ -1532,7 +1549,7 @@ main section:last-of-type {
 
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 2.2em;
+	grid-template-rows: auto;
 	transition: .5s;
 }
 
@@ -1566,7 +1583,8 @@ main section:last-of-type {
 
 	display: grid;
 	grid-template-columns:.5em 1fr .5em;
-	grid-template-rows: auto;
+	/* grid-template-rows: fit-content(50%); */
+	grid-auto-rows: 4em;
 	column-gap: 1em;
 	row-gap: 2em;
 	grid-auto-flow: column;
@@ -1664,4 +1682,8 @@ main section:last-of-type {
 
 	width: 100%;
 	height: 5em;
+}
+
+#favorite-page{
+	display: none;
 }
