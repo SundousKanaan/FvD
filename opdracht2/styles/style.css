@@ -86,8 +86,6 @@ body.OnepieceTheme{
 
 
 
-
-
 /****************/
 /* body STYLING */
 /****************/
@@ -255,6 +253,8 @@ header nav ul li a::before{
 	position: absolute;
 	left: 0;
 }
+
+
 
 
 
@@ -490,14 +490,28 @@ header>ul li[data-info="Onepiece-theme"].notworkTheme{
 
 
 
+#home-page.closeSection,
+#player-page.closeSection,
+#list-page.closeSection,
+#favorite-page.closeSection{
+	display: none;
+}
+
+#home-page.openSection,
+#player-page.openSection,
+#list-page.openSection,
+#favorite-page.openSection{
+	display: grid;
+}
+
 
 /*****************************/
 /* home page section STYLING */
 /*****************************/
 
-main section:last-of-type {
+/* main section:last-of-type {
 	margin-bottom: 1em;
-}
+} */
 
 #home-page {
 	margin: 0;
@@ -951,10 +965,6 @@ main section:last-of-type {
 	word-wrap: break-word;
 }
 
-/* #home-page{
-	display: none;
-} */
-
 
 
 
@@ -976,12 +986,13 @@ main section:last-of-type {
 /*******************************/
 
 #player-page{
-	display: grid;
+	/* display: grid; */
 	grid-template-columns: repeat(5, 20%);
 	grid-template-rows: repeat(3, auto) 17em auto;
 	row-gap: .5em;
 	justify-items: center;
 	color: var(--color-third);
+	display: none;
 }
 
 #player-page h2{
@@ -1342,10 +1353,6 @@ main section:last-of-type {
 	height: 5em;
 }
 
-#player-page{
-	display: none;
-}
-
 
 
 
@@ -1380,7 +1387,8 @@ main section:last-of-type {
 	background-color: var(--color-secondery);
 	border-radius: 10% 10% 0 0;
 
-	display: grid;
+	/* display: grid; */
+	display: none;
 	grid-template-columns: 1fr;
 	grid-template-rows: 2.2em;
 	transition: .5s;
@@ -1518,10 +1526,6 @@ main section:last-of-type {
 	height: 5em;
 }
 
-#list-page{
-	display: none;
-}
-
 
 
 
@@ -1547,7 +1551,8 @@ main section:last-of-type {
 	background-color: var(--color-secondery);
 	border-radius: 10% 10% 0 0;
 
-	display: grid;
+	/* display: grid; */
+	display: none;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	transition: .5s;
@@ -1684,6 +1689,3 @@ main section:last-of-type {
 	height: 5em;
 }
 
-#favorite-page{
-	display: none;
-}

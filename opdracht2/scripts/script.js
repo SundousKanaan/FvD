@@ -65,6 +65,82 @@ function openvideoPlayer(){
 nummerknop.addEventListener('click', openaudioPlayer);
 videoknop.addEventListener('click', openvideoPlayer);
 
+
+var homeSection = document.querySelector('#home-page');
+var playerSection = document.querySelector('#player-page');
+var listSection = document.querySelector('#list-page');
+var favoriteSection = document.querySelector('#favorite-page');
+
+var homeKnop = document.querySelector('header nav ul li:first-of-type a');
+var AllsongsKnop = document.querySelector('header nav ul li:nth-of-type(2) a');
+var OpeningsKnop = document.querySelector('header nav ul li:nth-of-type(3) a');
+var EndingsKnop = document.querySelector('header nav ul li:nth-of-type(4) a');
+var FavoritesKnop = document.querySelector('header nav ul li:nth-of-type(5) a');
+
+function homePage(){
+    homeSection.classList.add('openSection');
+    playerSection.classList.remove('openSection');
+    listSection.classList.remove('openSection');
+    favoriteSection.classList.remove('openSection');
+
+    homeSection.classList.remove('closeSection');
+    playerSection.classList.add('closeSection');
+    listSection.classList.add('closeSection');
+    favoriteSection.classList.add('closeSection');
+
+    navList.classList.remove('openNav');
+}
+
+function playerPage(){
+    homeSection.classList.remove('openSection');
+    playerSection.classList.add('openSection');
+    listSection.classList.remove('openSection');
+    favoriteSection.classList.remove('openSection');
+
+    homeSection.classList.add('closeSection');
+    playerSection.classList.remove('closeSection');
+    listSection.classList.add('closeSection');
+    favoriteSection.classList.add('closeSection');
+
+    navList.classList.remove('openNav');
+}
+
+function listPage(){
+    homeSection.classList.remove('openSection');
+    playerSection.classList.remove('openSection');
+    listSection.classList.add('openSection');
+    favoriteSection.classList.remove('openSection');
+
+    homeSection.classList.add('closeSection');
+    playerSection.classList.add('closeSection');
+    listSection.classList.remove('closeSection');
+    favoriteSection.classList.add('closeSection');
+
+    navList.classList.remove('openNav');
+}
+
+function favoritePage(){
+    homeSection.classList.remove('openSection');
+    playerSection.classList.remove('openSection');
+    listSection.classList.remove('openSection');
+    favoriteSection.classList.add('openSection');
+
+    homeSection.classList.add('closeSection');
+    playerSection.classList.add('closeSection');
+    listSection.classList.add('closeSection');
+    favoriteSection.classList.remove('closeSection');
+
+    navList.classList.remove('openNav');
+}
+
+homeKnop.addEventListener('click', homePage);
+AllsongsKnop.addEventListener('click', listPage);
+OpeningsKnop.addEventListener('click', listPage);
+EndingsKnop.addEventListener('click', listPage);
+FavoritesKnop.addEventListener('click', favoritePage);
+
+
+
 var playlist = document.querySelector('#player-page section');
 var playlistknop = document.querySelector('#player-page section button');
 
@@ -78,7 +154,6 @@ playlistknop.addEventListener('click', playlistOpen);
 
 var lastplayedKnop= document.querySelector('#home-page section:first-of-type button')
 var playerbackKnop= document.querySelector('#player-page button[data-vorm="back"]');
-var homePage = document.querySelector('#home-page');
 var playerPage = document.querySelector('#player-page');
 
 
