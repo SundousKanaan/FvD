@@ -186,10 +186,10 @@ header > button:first-of-type:hover{
 }
 
 header > button:first-of-type img {
-	width: 1.5em;
+	width: 100%;
 	grid-column-start: 1;
 	grid-row-start: 1;
-	filter: invert(100%) sepia(0%) saturate(19%) hue-rotate(279deg) brightness(106%) contrast(100%);
+	filter: drop-shadow(0 0 .1em  var(--color-theme));
 }
 
 
