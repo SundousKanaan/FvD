@@ -1,0 +1,1701 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+		url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+button,
+summary {
+	cursor: pointer;
+}
+
+html {
+	height: 100vh;
+}
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* Naruto theme */
+	--color-theme: rgb(255, 123, 0);
+	--color-secondery: black;
+	--color-third: white;
+	--color-opacity-white: rgba(225, 225, 225, .5);
+	--background: url(../images/naruto-background.svg);
+	--theme-symbol: url(../images/Uzumaki_Symbol.png);
+	--play-knop: url(../images/start-button.svg);
+
+	--play-knop-size: 5.5em;
+}
+
+body.BleachTheme{
+	--color-theme: rgb(255, 123, 0);
+	--color-secondery: black;
+	--color-third: white;
+	--color-opacity-white: rgba(225, 225, 225, .5);
+	--background: url(../images/naruto-background.svg);
+	--theme-symbol: url(../images/Uzumaki_Symbol.png);
+	--play-knop: url(../images/start-button.svg);
+}
+
+body.HxHTheme{
+	--color-theme: rgb(255, 123, 0);
+	--color-secondery: black;
+	--color-third: white;
+	--color-opacity-white: rgba(225, 225, 225, .5);
+	--background: url(../images/naruto-background.svg);
+	--theme-symbol: url(../images/Uzumaki_Symbol.png);
+	--play-knop: url(../images/start-button.svg);
+}
+
+body.OnepieceTheme{
+	--color-theme: rgb(255, 123, 0);
+	--color-secondery: black;
+	--color-third: white;
+	--color-opacity-white: rgba(225, 225, 225, .5);
+	--background: url(../images/naruto-background.svg);
+	--theme-symbol: url(../images/Uzumaki_Symbol.png);
+	--play-knop: url(../images/start-button.svg);
+}
+
+
+
+
+/****************/
+/* body STYLING */
+/****************/
+body {
+	margin: 0;
+	padding: .5em;
+	height: 100vh;
+	overflow: hidden;
+
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--color-text);
+	background-image: var(--background);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	backdrop-filter: blur(.5em);
+
+}
+
+
+
+
+
+
+
+
+
+
+/******************/
+/* header STYLING */
+/******************/
+
+header {
+	display: grid;
+	grid-template-columns: 2em 1fr 2em;
+	column-gap: .5em;
+	align-items: center;
+	position: relative;
+}
+
+header h1 {
+	margin: 0;
+	padding: 0;
+	grid-column-start: 2;
+	grid-row-start: 1;
+	display: grid;
+	justify-content: center;
+	position: relative;
+	color: var(--color-third);
+	z-index: 101;
+}
+
+header h1.Openmenu {
+	z-index: 101;
+}
+
+
+/* menu buttom */
+header > button:first-of-type {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	background: none;
+	border: none;
+}
+
+header > button:first-of-type img {
+	width: 1.5em;
+	grid-column-start: 1;
+	grid-row-start: 1;
+	filter: invert(100%) sepia(0%) saturate(19%) hue-rotate(279deg) brightness(106%) contrast(100%);
+}
+
+
+/* theme buttom */
+header > button:last-of-type {
+	grid-column-start: 3;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+header > button:last-of-type img {
+	width: 2.5em;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+/******************/
+/* nav STYLING */
+/******************/
+
+header nav {
+	padding: .5em 2em;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	background-image: url(../images/naruto-menu.svg);
+	background-repeat: no-repeat;
+	background-color: var(--color-theme);
+	background-position: right bottom;
+
+	transform: translateX(-100%);
+	transition: 0.5s;
+}
+
+header nav.openNav{
+	transform: translateX(0%);
+}
+
+header nav button{
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+}
+
+header nav ul {
+	margin: 0;
+	margin-top: 4em;
+	padding: 0;
+	list-style: none;
+}
+
+header nav ul li {
+	margin-bottom: 1.5em;
+	position: relative;
+	padding-left: 1em;
+}
+
+header nav ul li a{
+	font-size: 1.1em;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	padding-left: 2em;
+	color: var(--color-secondery);
+	text-decoration: none;
+	position: relative;
+}
+
+header nav ul li a::before{
+	content: "R";
+	/* var(--theme-symbol) */
+	display: inline-block;
+	width: 1em;
+	height: auto;
+	position: absolute;
+	left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************/
+/* themes STYLING */
+/******************/
+header>ul {
+	margin: 0;
+	padding: 0;
+	padding-top: 2.5em;
+	list-style: none;
+
+	background-color: var(--color-secondery);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: 100;
+
+	display: grid;
+	grid-template-columns: 1em 1fr 1em;
+	grid-template-rows: 3em auto;
+	row-gap: .5em;
+
+	transform: translateX(100%);
+	transition: .5s;
+}
+
+header>ul.openthemes{
+	transform: translateX(0%);
+}
+
+header>ul h2 {
+	margin: 0;
+	margin-top: .5em;
+	padding: 0;
+	padding-right: 1em;
+	color: var(--color-theme);
+	grid-column-start: 2;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	justify-self: center;
+}
+
+header>ul button{
+	border: none;
+	background-color: transparent;
+	grid-column-start: 2;
+	grid-column-end: -2;
+	grid-row-start: 1;
+	justify-self: start;
+	position: absolute;
+	top: -1em;
+}
+
+header>ul li {
+	background-color: var(--color-opacity-white);
+	grid-column-start: 2;
+	grid-column-end: -2;
+	border-radius: 2em;
+	height: 8em;
+	position: relative;
+
+	display: grid;
+}
+
+header>ul li button{
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
+	padding: 0;
+	top: 0;
+
+	display: grid;
+	grid-template-columns: .5em 40% 11% 11% 11% auto;
+	grid-template-rows: 10% 40% 40% 10%;
+	column-gap: .5em;
+}
+
+header>ul li button img {
+	height: 100%;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	justify-self: center;
+}
+
+header>ul li button p {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0;
+
+	grid-column-start: 3;
+	grid-column-end: -2;
+	grid-row-start: 2;
+}
+
+header>ul li button div {
+	width: 100%;
+	height: 50%;
+	border-radius: 20%;
+	border: solid rgba(225, 225, 225, 1) .1em;
+}
+
+header>ul li button div:nth-last-of-type(1) {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+
+}
+
+header>ul li button div:nth-last-of-type(2) {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 3;
+}
+
+header>ul li button div:nth-last-of-type(3) {
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 3;
+}
+
+header>ul li[data-info="Naruto-theme"] {
+	background-color: rgb(255, 123, 0);
+	grid-row-start: 2;
+}
+
+header>ul li[data-info="Naruto-theme"] button div:nth-last-of-type(1) {
+	background-color: rgb(255, 123, 0);
+}
+
+header>ul li[data-info="Naruto-theme"] button div:nth-last-of-type(2) {
+	background-color: black;
+}
+
+header>ul li[data-info="Naruto-theme"] button div:nth-last-of-type(3) {
+	background-color: white;
+}
+
+
+header>ul li[data-info="Bleach-theme"] {
+	grid-row-start: 3;
+}
+
+header>ul li[data-info="Bleach-theme"] button div:nth-last-of-type(1) {
+	background-color: #357E9D ;
+}
+
+header>ul li[data-info="Bleach-theme"] button div:nth-last-of-type(2) {
+	background-color: black;
+}
+
+header>ul li[data-info="Bleach-theme"] button div:nth-last-of-type(3) {
+	background-color: white;
+}
+
+
+header>ul li[data-info="HxH-theme"] {
+	grid-row-start: 4;
+}
+
+header>ul li[data-info="HxH-theme"] button div:nth-last-of-type(1) {
+	background-color: #48A741 ;
+}
+
+header>ul li[data-info="HxH-theme"] button div:nth-last-of-type(2) {
+	background-color: #C51F3A;
+}
+
+header>ul li[data-info="HxH-theme"] button div:nth-last-of-type(3) {
+	background-color: white;
+}
+
+header>ul li[data-info="Onepiece-theme"] {
+	grid-row-start: 5;
+}
+
+header>ul li[data-info="Onepiece-theme"] button div:nth-last-of-type(1) {
+	background-color: #0094FF ;
+}
+
+header>ul li[data-info="Onepiece-theme"] button div:nth-last-of-type(2) {
+	background-color: #FFC900;
+}
+
+header>ul li[data-info="Onepiece-theme"] button div:nth-last-of-type(3) {
+	background-color: white;
+}
+
+header>ul li[data-info="Onepiece-theme"] button img{
+	height: 120%;
+}
+
+header>ul li[data-info="Naruto-theme"] button p,
+header>ul li[data-info="Bleach-theme"] button p,
+header>ul li[data-info="HxH-theme"] button p,
+header>ul li[data-info="Onepiece-theme"] button p{
+justify-self: start;
+padding-top: 1em;
+}
+
+
+header>ul li[data-info="Naruto-theme"].workTheme,
+header>ul li[data-info="Bleach-theme"].workTheme,
+header>ul li[data-info="HxH-theme"].workTheme,
+header>ul li[data-info="Onepiece-theme"].workTheme {
+	background-color: var(--color-theme);
+}
+
+
+header>ul li[data-info="Naruto-theme"].notworkTheme,
+header>ul li[data-info="Bleach-theme"].notworkTheme,
+header>ul li[data-info="HxH-theme"].notworkTheme,
+header>ul li[data-info="Onepiece-theme"].notworkTheme{
+	background-color: rgba(225, 225, 225, .5);
+}
+
+
+
+
+
+
+#home-page.closeSection,
+#player-page.closeSection,
+#list-page.closeSection,
+#favorite-page.closeSection{
+	display: none;
+}
+
+#home-page.openSection,
+#player-page.openSection,
+#list-page.openSection,
+#favorite-page.openSection{
+	display: grid;
+}
+
+
+/*****************************/
+/* home page section STYLING */
+/*****************************/
+
+/* main section:last-of-type {
+	margin-bottom: 1em;
+} */
+
+#home-page {
+	margin: 0;
+	margin-top: .5em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: .7em;
+}
+
+#home-page section {
+	width: auto;
+	border-radius: 1em;
+}
+
+
+/* last played section */
+#home-page section:first-of-type {
+	height: 9.7em;
+	position: relative;
+	overflow: hidden;
+
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+
+	display: grid;
+	grid-template-columns: .7em 1fr 1fr .7em;
+	grid-template-rows: 4.5em 10% 15% 10% auto;
+	filter: drop-shadow(0 0 .3em var(--color-secondery));
+}
+
+#home-page section:first-of-type::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .5);
+
+
+	position: absolute;
+	left: 0;
+	z-index: 1;
+}
+
+#home-page section:first-of-type img {
+	position: absolute;
+	opacity: 100%;
+	z-index: 0;
+	filter: blur(.1em);
+	background-color: rgba(255, 255, 255, 0.4);
+
+	width: 100%;
+	height: 100% ;
+	object-fit: cover;
+	justify-self: center;
+
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+
+}
+
+#home-page section:first-of-type button,
+#home-page section:first-of-type button a,
+#home-page section:first-of-type button a img,
+#home-page section:first-of-type h2,
+#home-page section:first-of-type p {
+	position: relative;
+	z-index: 5;
+	margin: 0;
+	padding: 0;
+}
+
+#home-page section:first-of-type button {
+	margin: 0;
+	padding: 0;
+	width: var(--play-knop-size);
+	height: var(--play-knop-size);
+
+	border: none;
+	background: none;
+	grid-column-start: 2;
+	grid-column-end: -2;
+	grid-row-start: 2;
+	grid-row-end: 6;
+	justify-self: end;
+}
+
+#home-page section:first-of-type button a img {
+	width: var(--play-knop-size);
+	filter: none;
+	background-color: rgba(255, 255, 255, 0);
+	transition: .5s;
+}
+
+#home-page section:first-of-type button img:hover{
+transform: scale(1.2);
+}
+
+#home-page section:first-of-type button img:active{
+	transform: scale(.9);
+}
+
+#home-page section:first-of-type h2,
+#home-page section:first-of-type p {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	height: 1em;
+}
+
+#home-page section:first-of-type h2 {
+	color: var(--color-theme);
+	font-size: 1.3em;
+	grid-row-start: 3;
+
+}
+
+#home-page section:first-of-type p {
+	font-size: .7em;
+	color: var(--color-secondery);
+	font-weight: bold;
+}
+
+#home-page section:first-of-type p:first-of-type {
+	grid-row-start: 2;
+}
+
+#home-page section:first-of-type p:nth-of-type(2) {
+	grid-row-start: 4;
+}
+
+#home-page section:first-of-type p:nth-of-type(3) {
+	grid-row-start: 5;
+}
+
+
+
+
+
+
+/* favorites section */
+#home-page section:nth-of-type(2) {
+	height: 9.7em;
+
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 2;
+	height: 9.7em;
+	position: relative;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-columns: .7em 1fr .7em;
+	grid-template-rows: .7em 2fr 1fr .7em;
+}
+
+#home-page section:nth-of-type(2)::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .5);
+
+
+	position: absolute;
+	left: 0;
+	z-index: 1;
+}
+
+#home-page section:nth-of-type(2) img {
+	position: absolute;
+	opacity: 100%;
+	z-index: 0;
+	filter: blur(.1em);
+	background-color: rgba(255, 255, 255, 0.4);
+
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	justify-self: center;
+
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+}
+
+#home-page section:nth-of-type(2) div,
+#home-page section:nth-of-type(2) h2,
+#home-page section:nth-of-type(2) p {
+	position: relative;
+	z-index: 5;
+	margin: 0;
+	padding: 0;
+	z-index: 3;
+	color: var(--color-third);
+}
+
+#home-page section:nth-of-type(2) div {
+	border-radius: 1em;
+	background-color: black;
+	opacity: 75%;
+	padding: .7em;
+
+	grid-column-start: 2;
+	grid-column-end: -2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
+#home-page section:nth-of-type(2) h2 {
+	font-size: 1em;
+	color: var(--color-theme);
+	margin-bottom: .5em;
+}
+
+#home-page section:nth-of-type(2) p {
+	font-size: .8em;
+}
+
+#home-page section:nth-of-type(2) p::before {
+	content: "𝅘𝅥𝅮";
+	margin-right: .2em;
+	color: var(--color-theme);
+}
+
+
+
+
+
+
+/* Openings section */
+#home-page section:nth-of-type(3),
+#home-page section:nth-of-type(4) {
+	height: 10em;
+
+	grid-column-start: 1;
+	grid-column-end: -2;
+	grid-row-start: 3;
+
+	position: relative;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-columns: .7em 1fr .7em;
+	grid-template-rows: .7em 2fr 1fr .7em;
+}
+
+
+
+
+
+
+/* Endings section */
+#home-page section:nth-of-type(4) {
+	grid-column-start: 2;
+	grid-column-end: -1;
+	grid-row-start: 3;
+}
+
+#home-page section:nth-of-type(3)::before,
+#home-page section:nth-of-type(4)::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .5);
+
+	position: absolute;
+	left: 0;
+	z-index: 1;
+}
+
+#home-page section:nth-of-type(3) img,
+#home-page section:nth-of-type(4) img {
+	position: absolute;
+	opacity: 100%;
+	z-index: 0;
+	filter: blur(.1em);
+	background-color: rgba(255, 255, 255, 0.4);
+
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	justify-self: center;
+
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+}
+
+#home-page section:nth-of-type(3) div,
+#home-page section:nth-of-type(3) h2,
+#home-page section:nth-of-type(3) p,
+#home-page section:nth-of-type(4) div,
+#home-page section:nth-of-type(4) h2,
+#home-page section:nth-of-type(4) p {
+	position: relative;
+	z-index: 5;
+	margin: 0;
+	padding: 0;
+	z-index: 3;
+	color: var(--color-third);
+}
+
+#home-page section:nth-of-type(3) div,
+#home-page section:nth-of-type(4) div {
+	border-radius: 1em;
+	background-color: black;
+	opacity: 75%;
+	padding: .7em;
+
+	grid-column-start: 2;
+	grid-column-end: -2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
+#home-page section:nth-of-type(3) h2,
+#home-page section:nth-of-type(4) h2 {
+	font-size: 1em;
+	margin-bottom: .5em;
+	color: var(--color-theme);
+}
+
+#home-page section:nth-of-type(3) p,
+#home-page section:nth-of-type(4) p {
+	font-size: .8em;
+}
+
+#home-page section:nth-of-type(3) p::before,
+#home-page section:nth-of-type(4) p::before {
+	content: "𝅘𝅥𝅮";
+	margin-right: .2em;
+	color: var(--color-theme);
+}
+
+
+
+
+/* All songs section */
+#home-page section:nth-of-type(5) {
+	height: 10em;
+
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 4;
+
+	background-color: var(--color-opacity-white);
+
+	display: grid;
+	grid-template-columns: .7em 1fr 1fr .7em;
+	grid-template-rows: .7em 15% 1fr .7em;
+}
+
+#home-page section:nth-of-type(5) h2,
+#home-page section:nth-of-type(5) button {
+	font-size: 1em;
+	opacity: 100%;
+
+	margin: 0;
+	padding: 0;
+}
+
+#home-page section:nth-of-type(5) h2 {
+	color: var(--color-theme);
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+}
+
+#home-page section:nth-of-type(5)>button {
+	width: 5em;
+	height: 1.5em;
+	border: none;
+	background: none;
+	grid-column-start: 3;
+	grid-column-end: -2;
+	grid-row-start: 2;
+	justify-self: end;
+	color: var(--color-secondery);
+	font-size: .7em;
+}
+
+#home-page section:nth-of-type(5)>button:hover {
+	text-decoration: underline;
+}
+
+#home-page section:nth-of-type(5) ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 7.7em;
+
+	grid-column-start: 2;
+	grid-column-end: -2;
+	grid-row-start: 3;
+
+	display: grid;
+	grid-template-columns: repeat(12 , 4.2em);
+	grid-template-rows: repeat(1, 7em);
+	column-gap: 2%;
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior: none;
+}
+
+#home-page section:nth-of-type(5) ul::-webkit-scrollbar{
+	background: transparent;
+	height: .6em;
+	border-radius: 1em;
+}
+
+#home-page section:nth-of-type(5) ul::-webkit-scrollbar-thumb{
+	background: transparent;
+	border-radius: 1em;
+}
+
+#home-page section:nth-of-type(5) ul:hover::-webkit-scrollbar-thumb{
+	background: var(--color-theme);
+}
+
+
+#home-page section:nth-of-type(5) ul li {
+	display: grid;
+	grid-template-rows: 60% 30%;
+	width: 4.2em;
+	height: 100%;
+	row-gap: .5em;
+
+	justify-items: center
+}
+
+#home-page section:nth-of-type(5) ul li button {
+	display: block;
+	position: relative;
+	width: 4.2em;
+	height: 4.2em;
+
+	overflow: hidden;
+	border: none;
+	border-radius: 50%;
+
+	margin-bottom: .7em;
+}
+
+#home-page section:nth-of-type(5) ul li button img {
+	display: block;
+	width: 4.2em;
+	height: auto;
+
+	aspect-ratio: 1;
+	-webkit-mask: radial-gradient(transparent .6em, #ff000088 .6em .8em, red .8em);
+}
+
+#home-page section:nth-of-type(5) ul li p {
+	margin: 0;
+	padding: 0;
+	font-size: .7em;
+	width: 4.2em;
+	word-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************/
+/* player page section STYLING */
+/*******************************/
+
+#player-page{
+	/* display: grid; */
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: repeat(3, auto) 17em auto;
+	row-gap: .5em;
+	justify-items: center;
+	color: var(--color-third);
+	display: none;
+}
+
+#player-page h2{
+	margin-bottom: 0;
+	grid-column-start: 2;
+	grid-column-end:5;
+	grid-row-start: 2;
+}
+
+#player-page p[data-info="anime"]{
+	margin: 0;
+	grid-column-start: 2;
+	grid-column-end:5;
+	grid-row-start: 3;
+
+	position: relative;
+}
+
+#player-page > p[data-info="anime"]::before{
+	content: "";
+	width: 2em;
+	height: 2em;
+	display: none;
+	border-radius: 50%;
+	background-image: radial-gradient(var(--color-third) 30% , var(--color-theme) 50%);
+	position: absolute;
+	bottom: -3em;
+	left: calc(50% - 2 / 2);
+	z-index: 3;
+}
+
+#player-page > p[data-info="anime"]::after{
+	content: "";
+	width: 8em;
+	height: .5em;
+	display: none;
+	border-radius: 1em;
+	background-color: var(--color-theme);
+	position: absolute;
+	bottom: -2.5em;
+	left: 50%;
+	z-index: 2;
+	transform: rotate(50deg);
+	transform-origin: left;
+}
+
+#player-page > p[data-info="anime"].soortplayer::before,
+#player-page > p[data-info="anime"].soortplayer::after{
+	display: block;
+}
+
+.pause{
+	transform: rotate(20deg);
+}
+
+#player-page p[data-info="singer"]{
+	margin: 0;
+	grid-column-start: 3;
+	grid-column-end:4;
+	grid-row-start: 5;
+}
+
+#player-page > img{
+	height: 80%;
+	margin-top: 3em;
+	position: relative;
+	display: block;
+
+	grid-column-start: 2;
+	grid-column-end:5;
+	grid-row-start: 4;
+	grid-row-end: 5;
+
+	aspect-ratio: 1;
+	border-radius: 50%;
+	-webkit-mask: radial-gradient(
+		transparent 1.5em,
+		#ff000088 1.5em 2em,
+		red 2em);
+		
+	mask: radial-gradient(
+		transparent 1.5em,
+		#ff000088 1.5em 2em,
+		red 2em);
+}
+
+#player-page > img.closedcover{
+	display: none;
+}
+
+#player-page button{
+	margin: 0;
+	background: none;
+	border: none;
+}
+
+
+#player-page div{
+	width: 70%;
+
+	margin-top: .5em;
+	background-color: var(--color-third);
+	border-radius: 1em;
+
+	grid-column-start: 2;
+	grid-column-end:5;
+	grid-row-start: 1;
+	
+	display: grid;
+	grid-template-columns: repeat(2 , 1fr);
+}
+
+
+#player-page div button[data-info="nummer"]{
+	background-color: var(--color-theme);
+	border-radius: 1em;
+	color: var(--color-third);
+}
+
+#player-page div button[data-info="nummer"].closedplayer,
+#player-page div button[data-info="video"].closedplayer{
+	background-color: var(--color-third);
+	border-radius: 1em;
+	color: var(--color-secondery);
+}
+
+#player-page div button[data-info="nummer"].openplayer,
+#player-page div button[data-info="video"].openplayer{
+	background-color: var(--color-theme);
+	border-radius: 1em;
+	color: var(--color-third);
+}
+
+
+
+
+
+#player-page button[data-vorm="repeting"],
+#player-page button[data-vorm="heart"]{
+	grid-row-start: 5;
+}
+
+#player-page button[data-vorm="repeting"]{
+	grid-column-start: 1;
+	grid-column-end:2;
+}
+
+#player-page button[data-vorm="heart"]{
+	grid-column-start: 5;
+	grid-column-end:6;
+}
+
+#player-page button[data-vorm="back"]{
+	margin-top: .5em;
+	width: 1em;
+	grid-column-start: 1;
+	grid-column-end:2;
+	grid-row-start: 1;
+}
+
+#player-page button[data-type="previous"],
+#player-page button[data-type="next"],
+#player-page button[data-type="start"]{
+	width: 100%;
+	grid-row-start: 7;
+}
+
+#player-page button[data-type="previous"]{
+	grid-column-start: 1;
+	grid-column-end:2;
+}
+
+#player-page button[data-type="next"]{
+	transform: rotateY(180deg);
+	grid-column-start: 5;
+	grid-column-end:6;
+}
+
+#player-page button[data-type="start"]{
+	grid-column-start: 2;
+	grid-column-end:5;
+}
+
+#player-page audio{
+	grid-column-start: 1;
+	grid-column-end:-1;
+	grid-row-start: 6;
+
+	width: 100%;
+	position: relative;
+}
+
+#player-page audio::-webkit-media-controls-play-button,
+#player-page audio::-webkit-media-controls-mute-button{
+	display: none;
+}
+
+#player-page iframe{
+	display: none;
+	width: 104%;
+	height: 17em;
+
+	border: none;
+
+	grid-column-start: 1;
+	grid-column-end:-1;
+	grid-row-start: 4;
+	transition: .5s;
+}
+
+#player-page iframe.videoplayer{
+	display: block;
+}
+
+#player-page section{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: absolute;
+	height: 93%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	background-color: var(--color-secondery);
+	border-radius: 10% 10% 0 0;
+	transform: translatey(95%);
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2.2em;
+	transition: .5s;
+
+}
+
+#player-page section.openplaylist{
+	transform: translatey(0%);
+	z-index: 3;
+}
+
+#player-page section button{
+	border: none;
+	background-color: red;
+	width: 3em ;
+	height: .3em;
+	border-radius: 1em;
+	background-color: var(--color-third);
+	justify-self: center;
+	position: absolute;
+	top: 1.3em;
+}
+
+#player-page section ul{
+	margin: 0;
+	padding: 0;
+	padding-top: 1em;
+	list-style: none;
+	background-color: var(--color-opacity-white);
+
+	width: 100%;
+	height: 95%;
+	border-radius: 10% 10% 0 0;
+
+	position: absolute;
+	bottom: 0;
+
+	gap:1em;
+	overflow-x:auto;
+	scroll-snap-type:x mandatory;
+	overscroll-behavior-x: contain;
+
+	display: grid;
+	grid-template-columns:.5em 1fr .5em;
+	/* grid-template-rows: auto; */
+	grid-auto-rows: 4em;
+	column-gap: 1em;
+	row-gap: 2em;
+	grid-auto-flow: column;
+}
+
+#player-page section ul li{
+	width: 100%;
+	height: 4em;
+	grid-column-start: 2;
+	grid-column-end: -2;
+
+	display: grid;
+	grid-template-columns: 5em 1fr 4em ;
+	grid-template-rows: auto;
+	column-gap: 1em;
+}
+
+#player-page section ul li h3{
+	margin: 0;
+	padding: 0;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+}
+
+#player-page section ul li p[data-info="anime-name"]{
+	margin: 0;
+	padding: 0;
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+}
+
+#player-page section ul li p[data-info="singer-name"]{
+	margin: 0;
+	padding: 0;
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+}
+
+#player-page section ul li button[data-type="CD-cover"]{
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+	top: 0;
+	grid-column-start: 1;
+	grid-column-end:2;
+	grid-row-start: 1;
+	grid-row-end: 5;
+
+	width: 100%;
+	height: 5em;
+}
+
+#player-page section ul li button[data-type="CD-cover"] img{
+	height: 5em;
+
+	aspect-ratio: 1;
+	border-radius: 50%;
+	-webkit-mask: radial-gradient(transparent .5em, #ff000088 .5em 1em, red 1em);
+}
+
+#player-page section ul li button[data-type="heart"]{
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+	top: 0;
+	grid-column-start: 3;
+	grid-column-end:4;
+	grid-row-start: 1;
+	grid-row-end: 5;
+
+	width: 100%;
+	height: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************/
+/* player page section STYLING */
+/*******************************/
+#list-page{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: absolute;
+	height: 93%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+
+	background-color: var(--color-secondery);
+	border-radius: 10% 10% 0 0;
+
+	/* display: grid; */
+	display: none;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2.2em;
+	transition: .5s;
+}
+
+#list-page h2{
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	position: relative;
+	top: .4em;
+	color: var(--color-theme);
+	justify-self: center;
+}
+
+#list-page ul{
+	margin: 0;
+	padding: 0;
+	padding-top: 1em;
+	list-style: none;
+	background-color: var(--color-opacity-white);
+
+	width: 100%;
+	height: 95%;
+	border-radius: 10% 10% 0 0;
+
+	position: absolute;
+	bottom: 0;
+
+	overflow-x:auto;
+	scroll-snap-type:x mandatory;
+	overscroll-behavior-x: contain;
+
+	display: grid;
+	grid-template-columns:.5em 1fr .5em;
+	/* grid-template-rows: auto; */
+	grid-auto-rows: 4em;
+	column-gap: 1em;
+	row-gap: 2em;
+	grid-auto-flow: column;
+}
+
+#list-page ul li{
+	width: 100%;
+	height: 4em;
+	grid-column-start: 2;
+	grid-column-end: -2;
+
+	display: grid;
+	grid-template-columns: 5em 1fr 4em ;
+	grid-template-rows: auto;
+	column-gap: 1em;
+}
+
+
+#list-page ul li h3{
+	margin: 0;
+	padding: 0;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+}
+
+#list-page ul li p[data-info="anime-name"]{
+	margin: 0;
+	padding: 0;
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+}
+
+#list-page ul li p[data-info="singer-name"]{
+	margin: 0;
+	padding: 0;
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+}
+
+#list-page ul li button[data-type="CD-cover"]{
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+	top: 0;
+	grid-column-start: 1;
+	grid-column-end:2;
+	grid-row-start: 1;
+	grid-row-end: 5;
+
+	width: 100%;
+	height: 5em;
+}
+
+#list-page ul li button[data-type="CD-cover"]::after{
+	content:"" ;
+	display: block;
+	background-image: var(--play-knop) ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 3em;
+	height: 3em;
+
+	position: absolute;
+	right: 0;
+	bottom: -1em;
+}
+
+#list-page ul li button[data-type="CD-cover"] img{
+	height: 5em;
+
+	aspect-ratio: 1;
+	border-radius: 50%;
+	-webkit-mask: radial-gradient(transparent .5em, #ff000088 .5em 1em, red 1em);
+}
+
+#list-page ul li button[data-type="heart"]{
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+	top: 0;
+	grid-column-start: 3;
+	grid-column-end:4;
+	grid-row-start: 1;
+	grid-row-end: 5;
+
+	width: 100%;
+	height: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+/*******************************/
+/* favorite page section STYLING */
+/*******************************/
+#favorite-page{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: absolute;
+	height: 93%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	background-color: var(--color-secondery);
+	border-radius: 10% 10% 0 0;
+
+	/* display: grid; */
+	display: none;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	transition: .5s;
+}
+
+#favorite-page h2{
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	position: relative;
+	top: .4em;
+	color: var(--color-theme);
+	justify-self: center;
+}
+
+#favorite-page ul{
+	margin: 0;
+	padding: 0;
+	padding-top: 1em;
+	list-style: none;
+	background-color: var(--color-opacity-white);
+
+	width: 100%;
+	height: 95%;
+	border-radius: 10% 10% 0 0;
+
+	position: absolute;
+	bottom: 0;
+
+	overflow-x:auto;
+	scroll-snap-type:x mandatory;
+	overscroll-behavior-x: contain;
+
+	display: grid;
+	grid-template-columns:.5em 1fr .5em;
+	/* grid-template-rows: fit-content(50%); */
+	grid-auto-rows: 4em;
+	column-gap: 1em;
+	row-gap: 2em;
+	grid-auto-flow: column;
+}
+
+#favorite-page ul li{
+	width: 100%;
+	height: 4em;
+	grid-column-start: 2;
+	grid-column-end: -2;
+
+	display: grid;
+	grid-template-columns: 5em 1fr 4em ;
+	grid-template-rows: auto;
+	column-gap: 1em;
+}
+
+#favorite-page ul li h3{
+	margin: 0;
+	padding: 0;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+}
+
+#favorite-page ul li p[data-info="anime-name"]{
+	margin: 0;
+	padding: 0;
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+}
+
+#favorite-page ul li p[data-info="singer-name"]{
+	margin: 0;
+	padding: 0;
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+}
+
+#favorite-page ul li button[data-type="CD-cover"]{
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+	top: 0;
+	grid-column-start: 1;
+	grid-column-end:2;
+	grid-row-start: 1;
+	grid-row-end: 5;
+
+	width: 100%;
+	height: 5em;
+}
+
+#favorite-page ul li button[data-type="CD-cover"]::after{
+	content:"" ;
+	display: block;
+	background-image: var(--play-knop) ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 3em;
+	height: 3em;
+
+	position: absolute;
+	right: 0;
+	bottom: -1em;
+}
+
+#favorite-page ul li button[data-type="CD-cover"] img{
+	height: 5em;
+
+	aspect-ratio: 1;
+	border-radius: 50%;
+	-webkit-mask: radial-gradient(transparent .5em, #ff000088 .5em 1em, red 1em);
+}
+
+#favorite-page ul li button[data-type="heart"]{
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+	top: 0;
+	grid-column-start: 3;
+	grid-column-end:4;
+	grid-row-start: 1;
+	grid-row-end: 5;
+
+	width: 100%;
+	height: 5em;
+}
+

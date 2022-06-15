@@ -77,8 +77,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je ontwerp:
 
-  <img src=mobiel.jpg width="375px" alt="ontwerp opdracht 2 mobiel flow">
-  <img src="/readme-images/Desktop.png" width="375px" alt="ontwerp opdracht 2 desktop versie">
+  - <img src="/readme-images/mobiel.jpg" width="375px" alt="ontwerp opdracht 2 mobiel flow">
+  - <img src="/readme-images/Desktop.png" width="375px" alt="ontwerp opdracht 2 desktop versie">
+  - concept-v2:
+  <img src="/readme-images/concept-v2.png" width="375px" alt="ontwerp opdracht 2 desktop versie 2">
 
 
 
@@ -87,6 +89,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Interactieve site maken
   - Mooie animaties en interacties maken.
   - Audiospeler customizen volgens mijn design
+  
+  ### Gebruikte API:
+  Anime themes API: https://github.com/LetrixZ/animethemes-api
+  - Deze API inkludt:
+    - Artist name
+    - Artist foto
+    - Anime name
+    - Anime foto
+    - Anime jaar
+    - Anime seizoen
+    - Theme name
+    - Theme type (OP / ED)
+    - Theme quality
+    - Theme video URL
+    - Theme audio URL
+  
+  
 </details>
 
 
