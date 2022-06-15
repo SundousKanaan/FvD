@@ -79,6 +79,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   - <img src="/readme-images/mobiel.jpg" width="375px" alt="ontwerp opdracht 2 mobiel flow">
   - <img src="/readme-images/Desktop.png" width="375px" alt="ontwerp opdracht 2 desktop versie">
+  - concept-v2:
+  <img src="/readme-images/concept-v2.png" width="375px" alt="ontwerp opdracht 2 desktop versie 2">
 
 
 
