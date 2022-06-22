@@ -368,9 +368,10 @@ homeKnop.addEventListener('click', homePage);
 
 
 
-// ************
-// API code
-// ************
+// *****************************
+// ********* API code **********
+// *****************************
+
 var URL = "https://api.animethemes.moe/anime?include=animethemes.animethemeentries.videos";
 var allsongsList = document.querySelector('main > section:nth-of-type(3) ul');
 var allFavList = document.querySelector('main > section:nth-of-type(4) ul');
@@ -437,8 +438,6 @@ function sendSongLink(event){
     lastSongName.innerHTML = playerSongName.innerHTML=songName.innerHTML;
     lastAnimeName.innerHTML= playerAnimeName.innerHTML=animeName.innerHTML;
     lastSingerName.innerHTML=  playerSingerName.innerHTML=singerName.innerHTML;
-
-
 }
 
 
@@ -474,7 +473,6 @@ else if (filtered==="fav" && numOfFav===0){
                     <img src="${song.isFav?"./images/rode-heart.svg":"./images/empty-heart.svg"}" alt="${song.isFav?"rode heart icon":"empty heart icon"}">
                 </button>
             </li>`;
-            // console.log(songsHtml);
         if(filtered==="fav")
         allFavList.insertAdjacentHTML("beforeend", songsHtml);
     else
@@ -702,8 +700,6 @@ function startSlider() {
 		}
 		musicSlider.value = musicProgress;
 	}, audioDuration/10 * 100);
-
-
 }
 
 
