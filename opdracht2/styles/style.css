@@ -131,10 +131,11 @@ html {
 	--play-knop: url(../images/start-button.svg);
 	--pause-knop: url(../images/pause-button.svg);
 	--theme-render :url(../images/naruto-menu.svg);
-	--favo-empty-knop : url(/images/favoempty.svg);
+	--favo-empty-knop : url(../images/favoempty.svg);
 
 	--play-knop-size: 5.5em;
 }
+
 body.NarutoTheme{
 	--color-theme: rgb(255, 123, 0);
 	--color-secondery: black;
@@ -145,7 +146,7 @@ body.NarutoTheme{
 	--play-knop: url(../images/start-button.svg);
 	--pause-knop: url(../images/pause-button.svg);
 	--theme-render :url(../images/naruto-menu.svg);
-	--favo-empty-knop : url(/images/favoempty.svg);
+	--favo-empty-knop : url(../images/favoempty.svg);
 }
 
 body.BleachTheme{
@@ -157,7 +158,7 @@ body.BleachTheme{
 	--play-knop: url(../images/bleach-playknop.svg);
 	--pause-knop: url(../images/bleach-pauseknop.svg);
 	--theme-render :url(../images/ichigo-render.svg);
-	--favo-empty-knop : url(/images/Bleach-favoempty.svg);
+	--favo-empty-knop : url(../images/Bleach-favoempty.svg);
 
 }
 
@@ -170,7 +171,7 @@ body.HxHTheme{
 	--play-knop: url(../images/hxh-playknop.svg);
 	--pause-knop: url(../images/hxh-pauseknop.svg);
 	--theme-render :url(../images/gon-render.svg);
-	--favo-empty-knop : url(/images/HxH-favoempty.svg);
+	--favo-empty-knop : url(../images/HxH-favoempty.svg);
 }
 
 body.OnepieceTheme{
@@ -182,7 +183,7 @@ body.OnepieceTheme{
 	--play-knop: url(../images/onepiece-playknop.svg);
 	--pause-knop: url(../images/onepiece-pauseknop.svg);
 	--theme-render :url(../images/luffy-render.svg);
-	--favo-empty-knop : url(/images/Onepiece-favoempty.svg);
+	--favo-empty-knop : url(../images/Onepiece-favoempty.svg);
 }
 
 @media (prefers-color-scheme: light){
@@ -195,7 +196,7 @@ body.OnepieceTheme{
 		--play-knop: url(../images/onepiece-playknop.svg);
 		--pause-knop: url(../images/onepiece-pauseknop.svg);
 		--theme-render :url(../images/luffy-render.svg);
-		--favo-empty-knop : url(/images/Onepiece-favoempty.svg);
+		--favo-empty-knop : url(../images/Onepiece-favoempty.svg);
 	}
 }
 
