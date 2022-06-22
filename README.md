@@ -21,7 +21,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Opdracht 1 plan
 
-<details>
+<details open>
   <summary>uitwerken na schetsen idee (voor week 2)</summary>
 
 
@@ -41,7 +41,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Opdracht 1 reflectie
 
-<details>
+<details open>
   <summary>uitwerken bij afronden opdracht (voor week 4)</summary>
 
 
@@ -89,30 +89,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Interactieve site maken
   - Mooie animaties en interacties maken.
   - Audiospeler customizen volgens mijn design
+  - Info halen van de Api en verwerken in mijn site
   
   ### Gebruikte API:
-  Anime themes API: https://github.com/LetrixZ/animethemes-api
+  Anime themes API (Niet geldig voor online werken): https://github.com/LetrixZ/animethemes-api
+
+  Anime themes API: https://staging.animethemes.moe/api/docs/series/show/
+  ِGebruikte endpoint van de API (handmade):: https://api.animethemes.moe/anime?include=animethemes.animethemeentries.videos
+  
   - Deze API inkludt:
-    - Artist name
-    - Artist foto
-    - Anime name
+    - Anime info
+    - Artist info
     - Anime foto
-    - Anime jaar
-    - Anime seizoen
-    - Theme name
-    - Theme type (OP / ED)
-    - Theme quality
+    - Themes info
     - Theme video URL
-    - Theme audio URL
-  
-  
+    - Anime Studio info
 </details>
 
 
 
 ## Opdracht 2 test
 
-<details>
+<details open>
   <summary>uitwerken na testen (week 7)</summary>
 
   Neem minimaal 5 bevindingen op:
@@ -120,44 +118,67 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Het was niet echt duidelijk dat de menutitel een knop is om het menu naar beneden te verplaatsen en de audiospeler weer te geven.
+  - <img src="/readme-images/Bevinding1.png" width="375px" alt="Bevinding 1">
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Verplaats de lijst naar beneden bij het selecteren van een nummer (transform)
+  "transform: translatey(95%);"
+
+
+  
 
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Sommige properties werkt niet op andere browsers zoals backdrop-filter op Firefox.
+  - <img src="/readme-images/Bevinding2.png" width="375px" alt="Bevinding 2">
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  Ik zocht naar een oplossing maar kon het niet vinden
 
 
   ### Bevinding 3:
-  ...
+  De lijst met thema's heeft een margin nodig vanaf de onderkant in de telefoonmeting
+  - <img src="/readme-images/Bevinding3.png" width="375px" alt="Bevinding 3">
+  - <img src="/readme-images/Bevinding3-code.png" width="375px" alt="Bevinding 3 code">
+  
+    #### oplossing:
+    De oplossing was eenvoudig, namelijk het aanpassen van de rijen
+    - <img src="/readme-images/Bevinding3-oplossing.png" width="375px" alt="Bevinding 3 oplossing">
+    - <img src="/readme-images/Bevinding3-oplossingcode.png" width="375px" alt="Bevinding 3 oplossing code">
+  
+  ### Bevinding 4:
+  Wanneer de light modus is ingeschakeld, veranderen de kleuren, maar de geselecteerde theme knop blijft verkeerd
+  - <img src="/readme-images/Bevinding4.png" width="375px" alt="Bevinding 4">
+  - <img src="/readme-images/Bevinding4-code.png" width="375px" alt="Bevinding 4 code">
+  
+    #### oplossing:
+    Ik heb dit opgelost door te wijzigen waar de standaard knop kleur zich bevindt, deze toe te voegen aan de dark modus en de kleuren te wijzigen in de light modus
+    - <img src="/readme-images/Bevinding4-oplossingcode.png" width="375px" alt="Bevinding 4 oplossing code">
+  
 </details>
 
 
 
 ## Opdracht 2 reflectie
 
-<details>
+<details open>
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+   - <img src="readme-images/mobile-versie.png" width="375px" alt="mobile versiee">
+   - <img src="readme-images/grote-schermen.png" width="375px" alt="grote schermen versie">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Ik heb geleerd over de ِAPI, er informatie uit gehaald en op mijn site weergegeven. Mijn API was ingewikkeld maar na meerdere keren van proberen om zijn endpoint te begrijpen, het wordt beetje makkelijker.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  - <img src="readme-images/js-code.png" width="375px" alt="js-code 1">
+  - <img src="readme-images/js-code2.png" width="375px" alt="js-code 2">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Het was ingewikkeld om de informatie aan elkaar te koppelen en vervolgens in de speler weer te geven en de speler te laten werken zoals het hoort, dus ik vroeg een     vriend om hulp om dat te doen. Omdat hij Arabisch spreekt, was het iets gemakkelijker te begrijpen, het is nog steeds moeilijk voor mij, maar het kan gemakkelijker     worden als ik het herhaaldelijk gebruik.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
