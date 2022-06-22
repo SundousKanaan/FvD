@@ -24,12 +24,12 @@
 		<nav>
 			<button><img src="./images/colse.svg" alt=""></button>
 			<ul>
-				<li><a href="#home-page">Home</a></li>
-				<li><a href="#list-page">All songs</a></li>
-				<li><a href="#list-page">Openings</a></li>
-				<li><a href="#list-page">Endings</a></li>
-				<li><a href="#favorite-page">Favorites</a></li>
-				<li><a href="">Settings</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">All songs</a></li>
+				<li><a href="#">Openings</a></li>
+				<li><a href="#">Endings</a></li>
+				<li><a href="#">Favorites</a></li>
+				<li><a href="#">Settings</a></li>
 			</ul>
 		</nav>
 
@@ -75,41 +75,42 @@
 		</ul>
 	</header>
 	<main>
-		<section id="home-page">
+		<!-- home section  -->
+		<section>
 			<!-- last played -->
 			<section>
-				<h2>song name</h2>
+				<h2>Song name</h2>
 				<p>Last played</p>
-				<p>2</p>
-				<p>3</p>
-				<img src="images/hero.jpg" alt="last song played image">
+				<p>Anime name</p>
+				<p>Singer name</p>
+				<img src="images/CD-standaard.svg" alt="last song played image">
 				<button></button>
 			</section>
 			<!-- favorites -->
 			<section>
 				<button>
 					<h2>Favorites</h2>
-					<p>16 song</p>
+					<p>0 song</p>
 				</button>
-				<img src="images/hero.jpg" alt="favorites first song cover">
+				<img src="images/CD-standaard.svg" alt="favorites first song cover">
 			</section>
 
 			<!-- Openings -->
 			<section>
 				<button>
 					<h2>Openings</h2>
-					<p>2 song</p>
+					<p>18 songs</p>
 				</button>
-				<img src="images/hero.jpg" alt="first OP cover">
+				<img src="https://animethemes-stag-images.fra1.cdn.digitaloceanspaces.com/bVkooFKrLcBFIosFL9u1adHcVgPuWNTfWvnhdADn.jpg" alt="first OP cover">
 			</section>
 
 			<!-- Endings -->
 			<section>
 				<button>
 					<h2>Endings</h2>
-					<p>7 song</p>
+					<p>34 songs</p>
 				</button>
-				<img src="images/hero.jpg" alt="first OP cover">
+				<img src="https://animethemes-stag-images.fra1.cdn.digitaloceanspaces.com/sAlFks0nvWbYHq1D9BL9TECr0mygpX4LN7z3KUiH.png" alt="first OP cover">
 			</section>
 
 			<!-- All songs -->
@@ -124,103 +125,53 @@
 			</section>
 		</section>
 
-		 <section id="player-page">
-			<h2>song name</h2>
-			<p data-info="anime" class="soortplayer">anime</p>
-			<p data-info="singer">singer</p>
-			<img src="./images/hero.jpg" alt="">
+		<!-- player section  -->
+		 <section>
+			<h2>Song name</h2>
+			<p>Anime name</p>
+			<p>Singer</p>
+			<span></span>
+			<img src="./images/CD-standaard.svg" alt="CD standaard foto">
 			<div>
-				<button data-info="nummer">nummer</button>
-				<button data-info="video">video</button>
+				<button>Nummer</button>
+				<button>Video</button>
 			</div>
-			<button data-vorm="repeting">
-				<img src="./images/repet.svg" alt="">
+			<button>
+				<img src="./images/repet.svg" alt="repet pijl icon">
 			</button>
-			<button data-vorm="heart">
-				<img src="./images/empty-heart.svg" alt="">
-			</button>
-			<button data-vorm="back">
-				<img src="./images/back-pijl.svg" alt="">
+			<button>
+				<img  src="./images/Shuffle.svg" alt="Shuffle icon">
 			</button>
 
-			<button data-type="previous">
-				<img src="./images/audio-back.svg" alt="">
+			<button>
+				<img src="./images/audio-back.svg" alt="audio back pijl">
 			</button>
-			<button data-type="next">
-				<img src="./images/audio-back.svg" alt="">
+			<button>
+				<img src="./images/audio-back.svg" alt="audio verder pijl">
 			</button>
-			<button data-type="start">
-				<!-- <img src="./images/start-button.svg" alt=""> -->
-			</button>
+			<button></button>
 
-			<!-- <audio controls="0">
-				<source src="http://animethemes-api.herokuapp.com/api/v1/theme/40060-01/0/audio">
-			</audio> -->
-			<iframe src="https://animethemes.moe/video/RibbonNoKishi-OP1.webm"  frameborder="0"></iframe>
-			<!-- <section>
-				<button></button>
-				<ul>
-					<li>
-						<h3>title</h3>
-						<p data-info="anime-name">name</p>
-						<p data-info="singer-name">singer</p>
-						<button data-type="CD-cover">
-							<img src="./images/hero.jpg" alt="">
-						</button>
-						<button data-type="heart">
-							<img src="./images/empty-heart.svg" alt="">
-						</button>
-					</li>
-				</ul>
-			</section> -->
+			<audio>
+				<source src="" type="webm">
+			</audio>
+			<input type="range" min="0" max="100" value="0">
+			<p>00:00</p>
+			<p>00:00</p>
+			<video controls src="https://v.animethemes.moe/Bakemonogatari-OP1.webm"></video>
 		</section>
 
-		<section id="list-page">
+		<!-- list section  -->
+		<section>
 			<h2>List naam</h2>
 			<ul>
 			</ul>
 		</section>
 
-		<section id="favorite-page">
+		<!-- favorite section  -->
+		<section>
 			<h2>Favorites</h2>
-
+			<button></button>
 			<ul>
-				<li>
-					<h3>title</h3>
-					<p data-info="anime-name">name</p>
-					<p data-info="singer-name">singer</p>
-					<button data-type="CD-cover">
-						<img src="./images/hero.jpg" alt="">
-					</button>
-					<button data-type="heart">
-						<img src="./images/rode-heart.svg" alt="">
-					</button>
-				</li>
-
-				<li>
-					<h3>title</h3>
-					<p data-info="anime-name">name</p>
-					<p data-info="singer-name">singer</p>
-					<button data-type="CD-cover">
-						<img src="./images/hero.jpg" alt="">
-					</button>
-					<button data-type="heart">
-						<img src="./images/rode-heart.svg" alt="">
-					</button>
-				</li>
-
-				<li>
-					<h3>title</h3>
-					<p data-info="anime-name">name</p>
-					<p data-info="singer-name">singer</p>
-					<button data-type="CD-cover">
-						<img src="./images/hero.jpg" alt="">
-					</button>
-					<button data-type="heart">
-						<img src="./images/rode-heart.svg" alt="">
-					</button>
-				</li>
-
 			</ul>
 		</section>
 
