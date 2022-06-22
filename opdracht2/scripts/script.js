@@ -51,20 +51,6 @@ var getFavoSongs = document.querySelector('main > section:nth-of-type(4) button'
 
 
 
-function closeList(){
-    listSection.classList.toggle('closelist');
-}
-
-function closeFavoList(){
-    favoriteSection.classList.toggle('closelist');
-}
-
-listSectionTitle.addEventListener("click", closeList);
-favoriteSectionTitle.addEventListener("click", closeFavoList);
-
-
-
-
 // ********************
 // home buttons
 // ********************
@@ -126,17 +112,13 @@ var shuffleKnop = document.querySelector('main > section:nth-of-type(2) > button
 var songheartknop = document.querySelector('main > section:nth-of-type(3) ul li button:nth-of-type(2)');
 
 
-function addToFav(event){
 
-    var parentHtml=event.parentNode;
-    let isFav=!arrayOfSongs[Number(parentHtml.dataset.id)].isFav;
-    isFav?numOfFav++:numOfFav--;
-    favLength.innerHTML=`${numOfFav} songs`;
-    arrayOfSongs[Number(parentHtml.dataset.id)].isFav=isFav;
-    if(isFav)
-    favBlokImg.src=arrayOfSongs[Number(parentHtml.dataset.id)].poster;
-    event.querySelector("img").src=isFav?"./images/rode-heart.svg":"./images/empty-heart.svg";
-}
+
+
+
+
+
+
 
 // theme list functions
 // ********************
@@ -330,6 +312,7 @@ videoknop.addEventListener('click', openvideoPlayer);
 // nav list
 // **************
 
+
 // open the home section en close de nav list
 function homePage() {
     homeSection.classList.add('openSection');
@@ -396,6 +379,19 @@ var seeMoreknop = document.querySelector('main > section:first-of-type section:n
 var arrayOfSongs = [];
 
 
+// add songs to favorite
+function addToFav(event){
+    var parentHtml=event.parentNode;
+    let isFav=!arrayOfSongs[Number(parentHtml.dataset.id)].isFav;
+    isFav?numOfFav++:numOfFav--;
+    favLength.innerHTML=`${numOfFav} songs`;
+    arrayOfSongs[Number(parentHtml.dataset.id)].isFav=isFav;
+    if(isFav)
+    favBlokImg.src=arrayOfSongs[Number(parentHtml.dataset.id)].poster;
+    event.querySelector("img").src=isFav?"./images/rode-heart.svg":"./images/empty-heart.svg";
+}
+
+
 // function: data halen en opslaan een arrayOfSongs
 async function getsongs() {
     // var numOfSongs = 0;
@@ -426,6 +422,7 @@ async function getsongs() {
 }
 getsongs();
 
+// send song link to player
 function sendSongLink(event){
     theAudio.src= event.dataset.link;
     videoplayer.src= event.dataset.link;
@@ -450,6 +447,14 @@ function sendSongLink(event){
 async function filllist(filtered="all"){
     allsongsList.innerHTML='';
     allFavList.innerHTML='';
+ 
+ if(filtered==="fav" && numOfFav!=0){
+    getFavoSongs.classList.add("empty");
+}
+else if (filtered==="fav" && numOfFav===0){
+    getFavoSongs.classList.remove("empty");
+ 
+}
     for (const song of arrayOfSongs) {
         console.log(filtered,song.isFav);
             if(filtered==="fav"&&song.isFav===false)
@@ -488,8 +493,8 @@ async function getData(URL) {
 // close de nav list, li's maken in de ul & de pagina name in de nav stijlen
 // *************************************************************************
 // start all songs list
-[seeMoreknop,AllsongsKnop,lastplayedKnop].forEach(el => el.addEventListener("click", () => {
-    // listPage();
+[seeMoreknop,AllsongsKnop,lastplayedKnop,getFavoSongs].forEach(el => el.addEventListener("click", () => {
+
     allsongsList.innerHTML='';
  setTimeout(filllist, 3000);
 
@@ -518,23 +523,10 @@ async function getData(URL) {
 // end all songs list
 
 
-getFavoSongs.addEventListener("click", () => {
-    listPage();
-    allsongsList.innerHTML='';
-    setTimeout(filllist, 3000);
 
-    homeKnop.classList.remove('Open');
-    AllsongsKnop.classList.add('Open');
-    OpeningsKnop.classList.remove('Open');
-    EndingsKnop.classList.remove('Open');
-    FavoritesKnop.classList.remove('Open');
-
-    listSectionTitle.innerHTML = "All songs";
-});
 
 // start OP list
 [OPlistknop,OpeningsKnop].forEach(el=>el.addEventListener("click", () => {
-    // listPage();
    allsongsList.innerHTML='';
    setTimeout(()=>{ filllist("OP");}, 3000);
 
@@ -564,7 +556,6 @@ getFavoSongs.addEventListener("click", () => {
 
 // start ED list
 [EDlistknop,EndingsKnop].forEach(el=>el.addEventListener("click", () => {
-    // listPage()
     allsongsList.innerHTML='';
     setTimeout(()=>{ filllist("ED");}, 3000);
 
@@ -591,9 +582,11 @@ getFavoSongs.addEventListener("click", () => {
 }));
 // end ED list
 
+
+
+
 // start fav
 [FavoritesKnop,favoBlokknop].forEach(el=>el.addEventListener("click", () => {
-    // favoritePage();
    allsongsList.innerHTML='';
    filllist("fav");
 
@@ -686,7 +679,6 @@ getpartsongs();
 
 // player functions
 // ****************
-
 var musicProgress = 0;
 var myInterval;
 var musicSlider = document.querySelector("main > section:nth-of-type(2) input");
@@ -761,7 +753,6 @@ function toggleMusic() {
 
 // Audio events bron: https://www.w3schools.com/tags/ref_av_dom.asp
 // using padStart to append a "0" if the current time is only one digit but convert the Number var to a string var first
-
 theAudio.addEventListener("loadedmetadata",()=>{
     var time = theAudio.duration;
     var minutes = Math.floor(time / 60);
@@ -771,6 +762,7 @@ theAudio.addEventListener("loadedmetadata",()=>{
     musicSlider.value=0;  
     musicProgress=0;  
     isPlaying=false;
+    
     coverCDstuk.classList.remove('musicOn');
     playButton.classList.remove('musicOn');
     coverCD.style.animation = 'none';
@@ -791,59 +783,16 @@ theAudio.addEventListener("timeupdate",()=>{
 theButton.addEventListener("click", toggleMusic);
 musicSlider.addEventListener("mousedown", startMetSchuiven);
 musicSlider.addEventListener("change", sliderIsVerschoven);
-// function startSlider() {
-// 	myInterval = setInterval(function () {
-// 		musicProgress++
-
-// 		if (musicProgress > 100) {
-// 			musicProgress = 0;
-// 			clearInterval(myInterval);
-// 		}
-// 		musicSlider.value = musicProgress;
-// 	}, audioDuration/10 * 100);
-
-//     var time = theAudio.duration;
-//     var minutes = Math.floor(time / 60);
-//     var seconds = Math.floor(time - minutes * 60);
-//     songLength.innerHTML = `${minutes}:${seconds}`;
-// }
-
-// function startMetSchuiven() {
-// 	clearInterval(myInterval);
-// 	console.log("ik ben gestopt");
-// 	theAudio.pause();
-// }
-
-// function sliderIsVerschoven() {
-// 	musicProgress = musicSlider.value;
-// 	theAudio.currentTime = musicProgress/100 * audioDuration;
-// 	startSlider();
-// 	theAudio.play();
-// }
 
 
-// function toggleMusic() {
-// 	console.log(isPlaying);
-	
-// 	if (isPlaying == false) {
-// 		isPlaying = true;
-// 		startSlider();
-// 		theAudio.play();
-// 		theAudio.volume = 0.2;
+function closeList(){
+    listSection.classList.toggle('closelist');
+}
 
-//         coverCDstuk.classList.add('musicOn');
-//         coverCD.style.animationPlayState = 'running';
+function closeFavoList(){
+    favoriteSection.classList.toggle('closelist');
+}
 
-// 	} else {
-// 		isPlaying = false;
-// 		clearInterval(myInterval);
-// 		theAudio.pause();
+listSectionTitle.addEventListener("click", closeList);
+favoriteSectionTitle.addEventListener("click", closeFavoList);
 
-//         coverCDstuk.classList.remove('musicOn');
-//         coverCD.style.animationPlayState = 'paused';
-// 	}
-// }
-
-// playButton.addEventListener("click", toggleMusic);
-// musicSlider.addEventListener("mousedown", startMetSchuiven);
-// musicSlider.addEventListener("change", sliderIsVerschoven);

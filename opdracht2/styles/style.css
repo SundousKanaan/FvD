@@ -1,4 +1,81 @@
-/* CSS Document */
+/* SNEL KOPPELING */
+
+/*********/
+/* FONTS */
+/*********/
+
+/**************/
+/* CSS REMEDY */
+/**************/
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+/****************/
+/* body STYLING */
+/****************/
+
+/******************/
+/* header STYLING */
+/******************/
+
+/******************/
+/* nav STYLING */
+/******************/
+
+/******************/
+/* themes STYLING */
+/******************/
+
+/*****************************/
+/* home page section STYLING */
+/*****************************/
+/* last played section */
+/* favorites section */
+/* Openings section */
+/* Endings section */
+/* All songs section */
+
+/*******************************/
+/* player page section STYLING */
+/*******************************/
+
+/*****************************************************/
+/* list page section & favorite page section STYLING */
+/*****************************************************/
+/* lists items */
+/* favorite page is empty */
+
+/* ****************** */
+/*** groter schermen **/
+/* ****************** */
+/* nav STYLING */
+/* themes STYLING */
+/* home page section STYLING */
+/* last played section */
+/* home favorites section */
+/* home Openings section */
+/* home Endings section */
+/* home All songs section */
+/* player page section STYLING */
+/* list page section STYLING */
+/* favorite page section STYLING */
+
+/* ======================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*********/
 /* FONTS */
@@ -33,6 +110,9 @@ summary {
 html {
 	height: 100%;
 }
+
+
+
 
 
 
@@ -122,6 +202,10 @@ body.OnepieceTheme{
 
 
 
+
+
+
+
 /****************/
 /* body STYLING */
 /****************/
@@ -147,14 +231,16 @@ body {
 	backdrop-filter: blur(.5em);
 }
 
-
-
-
-
-
 main{
 	height: 94%;
 }
+
+
+
+
+
+
+
 
 /******************/
 /* header STYLING */
@@ -239,9 +325,8 @@ header > button:last-of-type:active{
 	transform: scale(.8);
 }
 
-/* body.OnepieceTheme header > button:last-of-type{
-	background-size: cover;
-} */
+
+
 
 
 
@@ -774,6 +859,7 @@ main > section:first-of-type section:first-of-type p:nth-of-type(2) {
 main > section:first-of-type section:first-of-type p:nth-of-type(3) {
 	grid-row-start: 5;
 }
+
 
 
 
@@ -1838,7 +1924,7 @@ main > section:nth-of-type(3) ul:empty::after{
 
 /* favorite page is empty */
 main > section:nth-of-type(4) > button{
-	display: none;
+	display: block;
 	width: 19em;
 	height: 24%;
 	position: absolute;
@@ -1867,9 +1953,9 @@ main > section:nth-of-type(4) > button:hover{
 	filter: drop-shadow(0 0 .5em var(--color-theme));
 }
 
-/* main > section:nth-of-type(4) ul:empty > button{
-	display: block;
-} */
+main > section:nth-of-type(4) > button.empty{
+	display: none ;
+}
 
 
 
@@ -1970,9 +2056,7 @@ main > section:nth-of-type(4) > button:hover{
 
 
 
-	/******************/
 	/* nav STYLING */
-	/******************/
 	header nav {
 		position: relative;
 		background-image:none;
@@ -2008,7 +2092,6 @@ main > section:nth-of-type(4) > button:hover{
 		margin: 0;
 		padding: 0;
 		width: 100%;
-		/* height: 6em; */
 		text-align: center;
 		padding-top: .2em;
 	}
@@ -2041,9 +2124,8 @@ main > section:nth-of-type(4) > button:hover{
 
 
 
-	/******************/
+
 	/* themes STYLING */
-	/******************/
 	header>ul{
 		grid-template-columns: 1em 1fr 1fr 1em;
 		grid-template-rows: 2.5em 3em repeat(2, 40%);
@@ -2112,9 +2194,7 @@ main > section:nth-of-type(4) > button:hover{
 
 
 
-	/*****************************/
 	/* home page section STYLING */
-	/*****************************/
 	main > section:first-of-type{
 		height: 100%;
 		display: grid;
@@ -2187,7 +2267,7 @@ main > section:nth-of-type(4) > button:hover{
 	}
 
 
-	/* player */
+	/* player page section STYLING */
 	main > section:nth-of-type(2){
 		width: 50%;
 		position: relative;
@@ -2225,6 +2305,7 @@ main > section:nth-of-type(4) > button:hover{
 		display: none;
 	}
 
+	/* list page section STYLING */
 	main > section:nth-of-type(3){
 		width: 50%;
 		height: 92%;
@@ -2255,6 +2336,7 @@ main > section:nth-of-type(4) > button:hover{
 		transform: translateY(4%);
 	}
 
+	/* favorite page section STYLING */
 	main > section:nth-of-type(4).closelist{
 		transform: translatey(4%);
 	}
